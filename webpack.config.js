@@ -4,7 +4,7 @@ var webpack = require('webpack');
 module.exports = {
     devtool: '',
     entry: [
-         'webpack-dev-server/client?http://localhost:3000',
+         'webpack-dev-server/client?http://localhost:3002',
          'webpack/hot/only-dev-server',
         './scripts/app.tsx'
     ],
@@ -16,9 +16,6 @@ module.exports = {
     resolve: {
         extensions: ['.tsx', '.js', '']
     },
-    plugins: [
-      new webpack.HotModuleReplacementPlugin()
-    ],
     module: {
         loaders: [{
             test: /\.tsx?$/,
@@ -26,5 +23,10 @@ module.exports = {
             include: path.join(__dirname, 'scripts')
         }]
     },
-    debug: true
+    debug: true,
+    devServer: {
+        contentBase: "./wwwroot",
+        host: "localhost",
+        port: 3002
+    },
 };
