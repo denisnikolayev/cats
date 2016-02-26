@@ -11,16 +11,16 @@ namespace Cats.Controllers
     {
         // GET: api/values
         [HttpGet]
-        public IEnumerable<string> Get()
+        public IEnumerable<int> Get()
         {
-            return new string[] {"value1", "value7", "value3", "values9"};
+            return new int[] {1, 3, 8, 10};
         }
 
         // GET api/values/5
         [HttpGet("{id}")]
-        public string Get(int id)
+        public int Get(int id)
         {
-            return "value";
+            return id + id;
         }
 
         // POST api/values
