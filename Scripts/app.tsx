@@ -1,8 +1,43 @@
 ﻿import * as React from "react"
 import {render} from "react-dom";
 import * as $ from 'jquery';
+import { Router, Route, Link, browserHistory, IndexRoute, Redirect } from "react-router" 
 
-export class App extends React.Component<{message:string}, { values: number[], sums:number[] }> {
+export class Master extends React.Component<{ children: any }, {}> {
+    render() {
+        return (
+            <div>
+                <div>
+                    <ul id="menu-bar">
+                        <li className="active">
+                            <Link to="catalog">
+                                <span>Каталог</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="basket">
+                                <span>Корзина</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="dressing-room">
+                                <span>Примерочная</span>
+                            </Link>
+                        </li>
+                        <li>
+                            <Link to="foto">
+                                <span>Фото</span>
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div>{this.props.children}</div>
+            </div>
+        );
+    }
+}
+
+export class Test extends React.Component<{message:string}, { values: number[], sums:any[] }> {
     constructor() {
         super();
         this.state = { values: [], sums: [] };
@@ -15,12 +50,13 @@ export class App extends React.Component<{message:string}, { values: number[], s
     }   
 
     get<T>(url:string) {
-        return new Promise<T>((rs, rj) => $.getJSON(url).then(rs).fail(rj))
+        return new Promise<T>((rs, rj) => $.getJSON(url).then(rs).fail(rj));
     }
 
     async onClick() {
         let result = await this.get<number[]>("/api/values");
         let sums = await Promise.all(result.map(item=> this.get<number>(`/api/values/${item}`)));
+        console.log(sums);
         this.setState({ values: result, sums: sums });
     }
 
@@ -36,4 +72,19 @@ export class App extends React.Component<{message:string}, { values: number[], s
     }
 }
 
-render(<App message="hello3" />, document.getElementById("app"));
+class NotFound extends React.Component<{}, {}> {
+    render() {
+        return <div className="test">This path does not exists</div>;
+    }
+}
+
+render(
+    <Router history={browserHistory}>
+        <Route path="/" component={Master}>
+            <IndexRoute component={Test}/>
+            <Redirect from="catalog" to="/" />
+            <Route path="*" component={NotFound}/>
+        </Route>
+    </Router>,
+    document.getElementById("app")
+);

@@ -4,8 +4,9 @@ var path = require("path");
 module.exports = {
     devtool: "",
     entry: [
-         "webpack-dev-server/client?http://localhost:3002",
-         "webpack/hot/only-dev-server",
+        "webpack-dev-server/client?http://localhost:3002",
+        "webpack/hot/only-dev-server",
+        "./Style/app.scss",
         "./scripts/app.tsx"
     ],
     output: {
@@ -14,16 +15,23 @@ module.exports = {
         publicPath: "/"
     },
     resolve: {
-        extensions: [".tsx", ".js", ""]
+        extensions: [".tsx", ".js", "", ".scss", ".png", ".jpg"]
     },
     module: {
         loaders: [{
             test: /\.tsx?$/,
             loaders: ["react-hot", "ts-loader"],
             include: path.join(__dirname, "scripts")
+        },
+        { test: /\.png|\.jpg$/, loader: "url-loader?limit=100000" },
+        {
+            test: /\.scss$/,
+            exclude: /node_modules|lib/,
+            loader: 'style!css!sass',
+            include: __dirname
         }]
     },
-    debug: false,
+    debug: true,
     devServer: {
         contentBase: "./wwwroot",
         host: "localhost",
@@ -33,6 +41,7 @@ module.exports = {
                 target: 'http://localhost:30155',
                 secure: false
             }
-        }
+        },
+        historyApiFallback: true
     }
 };
