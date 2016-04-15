@@ -41,12 +41,6 @@ export class Test extends React.Component<{}, { head: string, feet: string, body
     constructor() {
         super();
         this.state = { body:"", feet: "", head: "" };
-
-        //setInterval(async () => {           
-        //    var result = await this.load("/api/values");
-        //    this.setState({ values: result });
-
-        //}, 1000);
     }
     
     onClick(name: string, index: number) {
@@ -88,8 +82,8 @@ export class Test extends React.Component<{}, { head: string, feet: string, body
 
 
         return (
-            <div>
-                <div>
+            <div className="back">
+                <div style={{width:500}}>
                  {list}
                 </div>
                 {list2}
