@@ -1,4 +1,5 @@
-﻿// ReSharper disable once PossiblyUnassignedProperty
+/// <binding ProjectOpened='Hot' />
+// ReSharper disable once PossiblyUnassignedProperty
 var path = require("path");
 
 module.exports = {

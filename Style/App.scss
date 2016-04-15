@@ -8,3 +8,232 @@ html {
     color: red;
     background-color: black;
 }
+
+.rdu-wardrobe-item {
+    width: 56px;
+    height: 56px;
+    margin: 4px;
+    display:inline-block;
+}
+
+.rdu-head-01 {
+    background: url(../images/wardrobe.png);
+    background-position: -127px -233px;    
+}
+
+.rdu-head-02 {
+    background: url(../images/wardrobe.png);
+    background-position: -1px -5px
+}
+
+.rdu-head-03 {
+    background: url(../images/wardrobe.png);
+    background-position: -64px -81px
+}
+
+.rdu-head-04 {
+    background: url(../images/wardrobe.png);
+    background-position: -127px -175px
+}
+
+.rdu-head-05 {
+    background: url(../images/wardrobe.png);
+    background-position: -185px -233px
+}
+
+.rdu-head-06 {
+    background: url(../images/wardrobe.png);
+    background-position: -185px -175px
+}
+
+.rdu-body-01 {
+    background: url(../images/wardrobe.png);
+    background-position: -243px -233px
+}
+
+.rdu-body-02 {
+    background: url(../images/wardrobe.png);
+    background-position: -243px -175px
+}
+
+.rdu-body-03 {
+    background: url(../images/wardrobe.png);
+    background-position: -127px -117px
+}
+
+.rdu-body-04 {
+    background: url(../images/wardrobe.png);
+    background-position: -185px -117px
+}
+
+.rdu-body-05 {
+    background: url(../images/wardrobe.png);
+    background-position: -243px -117px
+}
+
+.rdu-body-06 {
+    background: url(../images/wardrobe.png);
+    background-position: -122px -59px
+}
+
+.rdu-feet-01 {
+    background: url(../images/wardrobe.png);
+    background-position: -180px -59px
+}
+
+.rdu-feet-02 {
+    background: url(../images/wardrobe.png);
+    background-position: -238px -59px
+}
+
+.rdu-feet-03 {
+    background: url(../images/wardrobe.png);
+    background-position: -64px -23px
+}
+
+.rdu-feet-04 {
+    background: url(../images/wardrobe.png);
+    background-position: -122px -1px
+}
+
+.rdu-feet-05 {
+    background: url(../images/wardrobe.png);
+    background-position: -180px -1px
+}
+
+.rdu-feet-06 {
+    background: url(../images/wardrobe.png);
+    background-position: -238px -1px
+}
+
+
+
+
+.rdu-runway-pony {
+    position:relative;
+    display:inline-block;
+    width: 360px;
+    height: 360px;
+    
+    div {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%
+    }
+
+
+     .rdu-tls-legs {
+        background: url(../images/tls-legs.png) no-repeat center center
+    }
+
+     .rdu-tls-body {
+        background: url(../images/tls-body.png) no-repeat center center
+    }
+
+     .rdu-tls-wing {
+        background: url(../images/tls-wing.png) no-repeat center center
+    }
+
+     .rdu-tls-head {
+        background: url(../images/tls-head.png) no-repeat center center
+    }
+
+     .rdu-tls-horn {
+        background: url(../images/tls-horn.png) no-repeat center center
+    }
+
+     .rdu-tls-hat {
+        background: url(../images/tls-crown.png) no-repeat center center
+    }
+
+     .rdu-tls-ear {
+        background: url(../images/tls-ear.png) no-repeat center center
+    }
+
+     .rdu-tls-hair {
+        background: url(../images/tls-hair.png) no-repeat center center
+    }
+
+     .rdu-apj-legs {
+        background: url(../images/apj-legs.png) no-repeat center center
+    }
+
+     .rdu-apj-body {
+        background: url(../images/apj-body.png) no-repeat center center
+    }
+
+     .rdu-apj-head {
+        background: url(../images/apj-head.png) no-repeat center center
+    }
+
+     .rdu-apj-ear {
+        background: url(../images/apj-ear.png) no-repeat center center
+    }
+
+     .rdu-apj-hat {
+        background: url(../images/apj-hat.png) no-repeat center center;
+        z-index: -10
+    }
+
+     .rdu-fls-legs {
+        background: url(../images/fls-legs.png) no-repeat center center
+    }
+
+     .rdu-fls-body {
+        background: url(../images/fls-body.png) no-repeat center center
+    }
+
+     .rdu-fls-hair {
+        background: url(../images/fls-hair.png) no-repeat center center
+    }
+
+     .rdu-fls-head {
+        background: url(../images/fls-head.png) no-repeat center center
+    }
+
+     .rdu-fls-ear {
+        background: url(../images/fls-ear.png) no-repeat center center
+    }
+
+     .rdu-fls-wing {
+        background: url(../images/fls-wing.png) no-repeat center center
+    }
+
+     .rdu-pkp-legs {
+        background: url(../images/pkp-legs.png) no-repeat center center
+    }
+
+     .rdu-pkp-body {
+        background: url(../images/pkp-body.png) no-repeat center center
+    }
+
+     .rdu-pkp-head {
+        background: url(../images/pkp-head.png) no-repeat center center
+    }
+
+     .rdu-pkp-ear {
+        background: url(../images/pkp-ear.png) no-repeat center center
+    }
+
+     .rdu-rbd-legs {
+        background: url(../images/rbd-legs.png) no-repeat center center
+    }
+
+     .rdu-rbd-body {
+        background: url(../images/rbd-body.png) no-repeat center center
+    }
+
+     .rdu-rbd-head {
+        background: url(../images/rbd-head.png) no-repeat center center
+    }
+
+     .rdu-rbd-ear {
+        background: url(../images/rbd-ear.png) no-repeat center center
+    }
+
+     .rdu-rbd-wing {
+        background: url(../images/rbd-wing.png) no-repeat center center
+    }
+}
