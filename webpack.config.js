@@ -1,6 +1,7 @@
 /// <binding ProjectOpened='Hot' />
 // ReSharper disable once PossiblyUnassignedProperty
 var path = require("path");
+var WebpackNotifierPlugin = require('webpack-notifier');
 
 module.exports = {
     devtool: "",
@@ -32,6 +33,7 @@ module.exports = {
             include: __dirname
         }]
     },
+    plugins:[new WebpackNotifierPlugin()],
     debug: true,
     devServer: {
         contentBase: "./wwwroot",

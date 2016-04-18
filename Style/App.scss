@@ -7,7 +7,7 @@ html {
 .back {
     background-image: url(../Images/bkg-game.png);
     background-repeat:space;
-    
+    height:800px
 }
 
 .test {
@@ -112,15 +112,57 @@ html {
     background-position: -238px -1px
 }
 
+.catalog-page{
+    margin-left:auto;
+    margin-right:auto;
+    width:500px;
+}
+
+.items{
+    width:320px;
+    top:300px;
+    left:50px;
+    position:absolute;
+    border:1px solid gray;
+    background-color:#ff8ac7;
+    box-shadow: 0 0 20px rgba(0,0,0,0.8);
+    border-radius:5px;
+}
+
+.back {
+    .pony {
+        position:absolute;
+        left: 550px;
+        top: 150px;
+    }
+}
+
+.chooseItem {
+    display:inline-block;
+    width:350px;
+    margin:10px;
+
+    button {
+        width:100%;
+    }
+
+    .pony {
+       position:relative;
+    }
+}
+
+.dressingRoom>button{
+    position:absolute;
+}
 
 
-
-.rdu-runway-pony {
-    position:relative;
+.pony {
+    
     display:inline-block;
     width: 360px;
     height: 360px;
     
+
     div {
         position: absolute;
         top: 0;
