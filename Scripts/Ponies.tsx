@@ -46,3 +46,20 @@ for (let type of itemIndexes) {
 
 
 export const ponies = ["apj", "fls", "pkp", "tls"]
+
+
+/*
+<div className="pony">
+        <Layer name={`rdu-${props.name}-legs`} />
+        <Layer name={`rdu-${props.name}-hair`} />
+        <Layer name={props.feet} />
+        <Layer name={`rdu-${props.name}-body`} />
+        <Layer name={props.body} />
+        <Layer name={`rdu-${props.name}-wing`} />
+        <Layer name="" />
+        <Layer name={`rdu-${props.name}-head`} />
+        <Layer name={props.head} />
+        <Layer name={`rdu-${props.name}-ear`} />
+        <Layer name={`rdu-${props.name}-horn`} />
+    </div>
+*/
